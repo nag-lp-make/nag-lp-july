@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NAG YOGA STUDIO &amp; PILATES NAG｜新規入会キャンペーン</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    .page-wrapper {
+      max-width: 480px;
+      margin: 0 auto;
+      background: #fff;
+      min-height: 100vh;
+    }
+
+    /* ── 1. ヒーローバナー ── */
+    .hero {
+      width: 100%;
+      line-height: 0;
+    }
+
+    .hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ── 規約ボックス ── */
+    .rule-box {
+      margin: 0 16px 16px;
+      padding: 14px 14px;
+      border: 2px solid #333;
+      border-radius: 12px;
+      background: #fff;
+      overflow-wrap: break-word;
+      word-break: break-all;
+      line-break: strict;
+    }
+
+    .rule-box__title {
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .rule-box__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .rule-box__list li {
+      font-size: 11px;
+      line-height: 1.8;
+      padding-left: 1em;
+      text-indent: -1em;
+      overflow-wrap: break-word;
+      word-break: break-all;
+    }
+
+    .rule-box__list li::before {
+      content: '・';
+    }
+
+    /* ── 2. キャンペーン訴求エリア ── */
+    .campaign {
+      background: linear-gradient(150deg, #00bfa5 0%, #00796b 100%);
+      color: #fff;
+      text-align: center;
+      padding: 44px 28px 38px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .campaign::before {
+      content: '';
+      position: absolute;
+      width: 240px; height: 240px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+      top: -100px; right: -80px;
+      pointer-events: none;
+    }
+
+    .campaign::after {
+      content: '';
+      position: absolute;
+      width: 160px; height: 160px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+      bottom: -70px; left: -50px;
+      pointer-events: none;
+    }
+
+    .campaign__deco {
+      position: absolute;
+      width: 100px; height: 100px;
+      border-radius: 50%;
+      background: rgba(255,140,0,0.1);
+      top: 20px; left: -30px;
+      pointer-events: none;
+    }
+
+    .campaign__label {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 20px;
+      padding: 5px 18px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      margin-bottom: 20px;
+    }
+
+    .campaign__heading {
+      font-size: 30px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      line-height: 1.55;
+      margin-bottom: 8px;
+    }
+
+    .campaign__heading .hl {
+      color: #FFE066;
+    }
+
+    .campaign__divider {
+      width: 36px; height: 2px;
+      background: rgba(255,255,255,0.35);
+      border-radius: 1px;
+      margin: 0 auto 24px;
+    }
+
+    .campaign__body {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.9;
+      margin-bottom: 24px;
+    }
+
+    .campaign__body em {
+      font-style: normal;
+      font-size: 32px;
+      color: #FFE066;
+      font-weight: 900;
+    }
+
+    .campaign__badges {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 20px;
+      padding: 7px 16px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .campaign__subcopy {
+      text-align: center;
+    }
+
+    .subcopy-text {
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+
+    /* ── 3. ボタンエリア ── */
+    .buttons-section {
+      padding: 28px 16px 8px;
+    }
+
+    .buttons-section__title {
+      text-align: center;
+      font-size: 14px;
+      font-weight: 700;
+      color: #666;
+      margin-bottom: 16px;
+      letter-spacing: 0.08em;
+      position: relative;
+    }
+
+    .buttons-section__title::before,
+    .buttons-section__title::after {
+      content: '';
+      display: inline-block;
+      width: 30px;
+      height: 1px;
+      background: #ccc;
+      vertical-align: middle;
+      margin: 0 8px;
+    }
+
+    /* スタジオグループ枠 */
+    .studio-group {
+      border-radius: 18px;
+      padding: 20px 14px;
+      margin-bottom: 20px;
+    }
+
+    .studio-group--yoga {
+      border: 2.5px solid #FF8C00;
+      background: #fffaf4;
+    }
+
+    .studio-group--pilates {
+      border: 2.5px solid #00A896;
+      background: #f2faf9;
+    }
+
+    .studio-group__header {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .studio-group__brand {
+      display: block;
+      font-size: 17px;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+    }
+
+    .studio-group__brand--yoga  { color: #FF8C00; }
+    .studio-group__brand--pilates { color: #00A896; }
+
+    .studio-group__sub {
+      display: block;
+      font-size: 11px;
+      color: #999;
+      margin-top: 3px;
+      letter-spacing: 0.04em;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 17px 16px;
+      border: none;
+      border-radius: 50px;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+      line-height: 1.4;
+      cursor: pointer;
+      transition: transform 0.1s ease, filter 0.1s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .btn:active {
+      transform: scale(0.97);
+      filter: brightness(0.9);
+    }
+
+    .btn--yoga {
+      background: #FF8C00;
+    }
+
+    .btn--pilates {
+      background: #3EC9B8;
+    }
+
+    .btn__location {
+      display: block;
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+
+    .btn__text {
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+      opacity: 0.88;
+    }
+
+    /* ── 4. 公式サイトリンク ── */
+    .official-links {
+      padding: 8px 16px 28px;
+    }
+
+    .official-links__title {
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: #999;
+      margin-bottom: 12px;
+      letter-spacing: 0.08em;
+    }
+
+    .official-links__list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .link-btn {
+      display: block;
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 700;
+      transition: transform 0.1s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .link-btn:active {
+      transform: scale(0.97);
+    }
+
+    .link-btn--yoga {
+      color: #00A896;
+      border: 2px solid #00A896;
+      background: #f0faf9;
+    }
+
+    .link-btn--pilates {
+      color: #FF8C00;
+      border: 2px solid #FF8C00;
+      background: #fff8f0;
+    }
+
+    /* ── 5. フッター ── */
+    footer {
+      background: #2c2c2c;
+      color: #ccc;
+      text-align: center;
+      padding: 24px 16px;
+    }
+
+    .footer__name {
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .footer__studios {
+      font-size: 12px;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    .footer__copy {
+      font-size: 11px;
+      color: #888;
+    }
+
+    /* ── クリック履歴ボタン（非表示） ── */
+    .history-section {
+      display: none;
+      padding: 12px 16px 20px;
+      text-align: center;
+    }
+
+    .btn--history {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #e8e8e8;
+      color: #888;
+      border: none;
+      border-radius: 6px;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .btn--history:active {
+      background: #d8d8d8;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- 1. ヒーローバナー -->
+    <section class="hero">
+      <img src="top-banner.png.png" alt="">
+    </section>
+
+    <!-- 2. キャンペーン訴求エリア -->
+    <section class="campaign">
+      <span class="campaign__deco" aria-hidden="true"></span>
+      <p class="campaign__label">NEW MEMBER CAMPAIGN</p>
+      <h1 class="campaign__heading">
+        <span class="hl">新規入会</span>キャンペーン<br>実施中！
+      </h1>
+      <div class="campaign__divider"></div>
+      <p class="campaign__body">
+        ヨガもピラティスも、<br>
+        最初の2ヶ月は月々<em>2,882円</em>！
+      </p>
+      <div class="campaign__badges">
+        <span class="badge">✓ 駐車場無料</span>
+        <span class="badge">✓ 初心者歓迎</span>
+      </div>
+      <div class="campaign__subcopy">
+        <p class="subcopy-text">体験レッスン予約は以下のボタンから！</p>
+      </div>
+    </section>
+
+    <!-- 3. 体験申込ボタン -->
+    <section class="buttons-section">
+      <p class="buttons-section__title">体験レッスン予約</p>
+
+      <!-- NAG YOGA STUDIO グループ -->
+      <div class="studio-group studio-group--yoga">
+        <div class="studio-group__header">
+          <img src="YOGArogo.png.png" alt="NAG YOGA STUDIO" style="width:70%;display:block;margin:0 auto;mix-blend-mode:multiply;">
+        </div>
+        <div class="btn-group">
+          <a
+            href="https://www.nag-yoga.com/studio/noritake/#trial"
+            class="btn btn--yoga"
+            data-button-name="【則武新町】ヨガ体験レッスン"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="btn__location">【西区】イオン則武新町店</span>
+            <span class="btn__text">ヨガ体験レッスンを予約する</span>
+          </a>
+
+          <a
+            href="https://www.nag-yoga.com/studio/nagoyadomemae/#trial"
+            class="btn btn--yoga"
+            data-button-name="【ナゴヤドーム前】ヨガ体験レッスン"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="btn__location">【東区】イオンナゴヤドーム前店</span>
+            <span class="btn__text">ヨガ体験レッスンを予約する</span>
+          </a>
+        </div>
+      </div>
+
+
+      <!-- PILATES NAG グループ -->
+      <div class="studio-group studio-group--pilates">
+        <div class="studio-group__header">
+          <img src="Pilarogo.jpg.jpg" alt="Pilates Nag Studio" style="width:70%;display:block;margin:0 auto;mix-blend-mode:multiply;">
+        </div>
+        <div class="btn-group">
+          <a
+            href="https://pilates-nag.com/%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%AA/%E6%98%9F%E3%81%8C%E4%B8%98%E3%83%86%E3%83%A9%E3%82%B9%E5%BA%97/#taiken"
+            class="btn btn--pilates"
+            data-button-name="【星が丘テラス】ピラティス体験レッスン"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="btn__location">【千種区】星が丘テラス店</span>
+            <span class="btn__text">ピラティス体験レッスンを予約する</span>
+          </a>
+
+          <a
+            href="https://www.nag-yoga.com/studio/noritake/#pilatrial"
+            class="btn btn--pilates"
+            data-button-name="【則武新町】ピラティス体験レッスン"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="btn__location">【西区】イオン則武新町店</span>
+            <span class="btn__text">ピラティス体験レッスンを予約する</span>
+          </a>
+
+          <a
+            href="https://pilates-nag.com/%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%AA/%E3%83%8A%E3%82%B4%E3%83%A4%E3%83%89%E3%83%BC%E3%83%A0%E5%BA%97/#taiken"
+            class="btn btn--pilates"
+            data-button-name="【ナゴヤドーム前】ピラティス体験レッスン"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="btn__location">【東区】イオンナゴヤドーム前店</span>
+            <span class="btn__text">ピラティス体験レッスンを予約する</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 規約テキスト -->
+    <div class="rule-box">
+      <p class="rule-box__title">&lt;キャンペーンのご利用にあたって&gt;</p>
+      <ul class="rule-box__list">
+        <li>体験当日に入会手続きをした方が対象です。</li>
+        <li>体験なしで入会手続きをした方も対象です。</li>
+        <li>別途、施設利用料2,200円をお支払い頂きます（初回のみ）。</li>
+        <li>店頭でお手続きの際は、金融機関届出印、2ヶ月分の会費、ご利用口座のキャッシュカードをお持ち下さい。</li>
+        <li>3ヵ月目からは通常料金で口座引き落としとなります。</li>
+        <li>月の途中でも初月は末日で1ヶ月のカウントとなります。</li>
+        <li>キャンペーン適用には、8ヶ月間の在籍が条件となります。</li>
+        <li>水素水飲み放題会員加入の方も8か月間の継続が必要です。</li>
+        <li>特典はご入会手続き完了時にお渡しします。</li>
+        <li>他キャンペーンや各種入会特典との併用は出来ません。</li>
+        <li>その他スタジオのご利用にあたっては、会則・施設利用約款にしたがってご利用願います。</li>
+        <li>キャンペーンは予告なく内容の変更及び終了する場合がございます。予めご了承ください。</li>
+      </ul>
+    </div>
+
+    <!-- 4. 公式サイトリンク -->
+    <section class="official-links">
+      <img src="NAGSTUDIOrogo.png" alt="NAG STUDIO" style="width:72%;display:block;margin:0 auto 12px;mix-blend-mode:multiply;">
+      <p class="official-links__title">NAG STUDIO 公式サイト</p>
+      <div class="official-links__list">
+        <a
+          href="https://www.nag-yoga.com/"
+          class="link-btn link-btn--pilates"
+          data-button-name="NAG YOGA STUDIO 公式サイト"
+          target="_blank"
+          rel="noopener"
+        >
+          NAG YOGA STUDIO 公式サイト
+        </a>
+        <a
+          href="https://pilates-nag.com/"
+          class="link-btn link-btn--yoga"
+          data-button-name="Pilates Nag Studio 公式サイト"
+          target="_blank"
+          rel="noopener"
+        >
+          Pilates Nag Studio 公式サイト
+        </a>
+      </div>
+    </section>
+
+    <!-- 5. フッター -->
+    <footer>
+      <p class="footer__name">NAG YOGA STUDIO &amp; PILATES</p>
+      <p class="footer__studios">
+        イオンナゴヤドーム前店 / イオン則武新町店 / 星が丘テラス
+      </p>
+      <p class="footer__copy">© 2026 株式会社エヌエージム</p>
+    </footer>
+
+    <!-- クリック履歴確認 -->
+    <div class="history-section">
+      <button class="btn--history" id="showHistory">クリック履歴を確認する</button>
+    </div>
+
+  </div>
+
+  <script>
+    (function () {
+      var STORAGE_KEY = 'nag_click_log';
+
+      function getLog() {
+        try {
+          return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+        } catch (e) {
+          return [];
+        }
+      }
+
+      function saveLog(log) {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(log));
+        } catch (e) {}
+      }
+
+      function formatDate(iso) {
+        var d = new Date(iso);
+        var pad = function (n) { return String(n).padStart(2, '0'); };
+        return d.getFullYear() + '/' +
+               pad(d.getMonth() + 1) + '/' +
+               pad(d.getDate()) + ' ' +
+               pad(d.getHours()) + ':' +
+               pad(d.getMinutes()) + ':' +
+               pad(d.getSeconds());
+      }
+
+      // すべての data-button-name 要素にクリック計測を付与
+      document.querySelectorAll('[data-button-name]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          var name = el.getAttribute('data-button-name');
+          var log = getLog();
+          log.push({ name: name, time: new Date().toISOString() });
+          saveLog(log);
+        });
+      });
+
+      // クリック履歴表示
+      document.getElementById('showHistory').addEventListener('click', function () {
+        var log = getLog();
+        if (log.length === 0) {
+          alert('クリック履歴はまだありません。');
+          return;
+        }
+        var lines = log.map(function (entry, i) {
+          return (i + 1) + '. ' + formatDate(entry.time) + '\n   ' + entry.name;
+        });
+        alert('【クリック履歴】\n\n' + lines.join('\n\n'));
+      });
+    })();
+  </script>
+</body>
+</html>
