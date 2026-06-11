@@ -26,18 +26,23 @@
            pad(d.getSeconds());
   }
 
-  // すべての data-button-name 要素にクリック計測を付与
-  document.querySelectorAll('[data-button-name]').forEach(function (el) {
+  // DOM読み取りをまとめて先行実施（強制リフロー防止）
+  var trackingEls = Array.from(document.querySelectorAll('[data-button-name]'));
+  var buttonNames = trackingEls.map(function (el) {
+    return el.getAttribute('data-button-name');
+  });
+  var historyBtn = document.getElementById('showHistory');
+
+  // イベントリスナー登録（DOM書き込み）をまとめて実施
+  trackingEls.forEach(function (el, i) {
     el.addEventListener('click', function () {
-      var name = el.getAttribute('data-button-name');
       var log = getLog();
-      log.push({ name: name, time: new Date().toISOString() });
+      log.push({ name: buttonNames[i], time: new Date().toISOString() });
       saveLog(log);
     });
   });
 
-  // クリック履歴表示
-  document.getElementById('showHistory').addEventListener('click', function () {
+  historyBtn.addEventListener('click', function () {
     var log = getLog();
     if (log.length === 0) {
       alert('クリック履歴はまだありません。');
