@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson Schedule | NAG STUDIO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #f7f5f2;
+    color: #424242;
+    font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .wrap {
+    max-width: 480px;
+    min-height: 100vh;
+    min-height: 100dvh;
+    margin: 0 auto;
+    padding: 56px 24px 32px;
+    display: flex;
+    flex-direction: column;
+  }
+  header { text-align: center; margin-bottom: 40px; }
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: #c9a96e;
+    font-weight: 500;
+    margin-bottom: 14px;
+  }
+  h1 { font-size: 19px; font-weight: 400; letter-spacing: 0.08em; }
+  .rule { width: 32px; height: 1px; background: #c9a96e; margin: 20px auto 0; }
+  main { flex: 1; display: flex; flex-direction: column; gap: 40px; }
+
+  .group { --accent: #c9a96e; --accent-bg: #f0ebe3; }
+  .group.pilates { --accent: #8fb8a8; --accent-bg: #e6eeea; }
+
+  .group-label {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.24em;
+    color: var(--accent);
+    margin-bottom: 18px;
+    white-space: nowrap;
+  }
+  .group-label::before, .group-label::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--accent);
+    opacity: 0.6;
+  }
+  .list { display: flex; flex-direction: column; gap: 12px; }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 20px;
+    background: var(--accent-bg);
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    color: #424242;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.2s ease;
+  }
+  .btn:active { transform: scale(0.97); }
+  @media (hover: hover) { .btn:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.06); } }
+  .icon { flex-shrink: 0; width: 22px; height: 22px; color: var(--accent); }
+  .text { flex: 1; min-width: 0; }
+  .main-t { display: block; font-size: 15px; font-weight: 500; letter-spacing: 0.08em; }
+  .sub-t { display: block; font-size: 11px; font-weight: 300; letter-spacing: 0.08em; margin-top: 4px; color: #6d6d6d; }
+  .arrow { flex-shrink: 0; width: 14px; height: 14px; color: var(--accent); }
+  footer { text-align: center; font-size: 10px; letter-spacing: 0.2em; color: #9e9e9e; margin-top: 48px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="eyebrow">LESSON SCHEDULE</p>
+    <h1>スタジオを選択してください</h1>
+    <div class="rule"></div>
+  </header>
+
+  <main>
+    <section class="group yoga">
+      <h2 class="group-label">NAG YOGA STUDIO</h2>
+      <div class="list">
+        <a class="btn" href="https://www.nag-yoga.com/studio/noritake/#:~:text=%E3%81%9F%E3%81%97%E3%81%BE%E3%81%99%E3%80%82-,%E3%83%AC%E3%83%83%E3%82%B9%E3%83%B3%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB,-11%E6%9C%88" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>
+          <span class="text"><span class="main-t">則武新町店</span><span class="sub-t">イオン則武新町</span></span>
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+        </a>
+        <a class="btn" href="https://www.nag-yoga.com/studio/nagoyadomemae/#:~:text=%E3%81%9F%E3%81%97%E3%81%BE%E3%81%99%E3%80%82-,%E3%83%AC%E3%83%83%E3%82%B9%E3%83%B3%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB,-11%E6%9C%88" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>
+          <span class="text"><span class="main-t">ナゴヤドーム前店</span><span class="sub-t">イオンモールナゴヤドーム前</span></span>
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="group pilates">
+      <h2 class="group-label">PILATES NAG STUDIO</h2>
+      <div class="list">
+        <a class="btn" href="https://pilates-nag.com/%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%AA/%E3%83%8A%E3%82%B0%E3%83%A8%E3%82%AC%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%AA%E3%83%94%E3%83%A9%E3%83%86%E3%82%A3%E3%82%B9-%E5%89%87%E6%AD%A6%E6%96%B0%E7%94%BA/#:~:text=%E3%81%9F%E3%81%97%E3%81%BE%E3%81%99%E3%80%82-,%E3%83%AC%E3%83%83%E3%82%B9%E3%83%B3%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB,-11%E6%9C%88" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>
+          <span class="text"><span class="main-t">則武新町店</span><span class="sub-t">イオン則武新町</span></span>
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+        </a>
+        <a class="btn" href="https://pilates-nag.com/%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%AA/%E6%98%9F%E3%81%8C%E4%B8%98%E3%83%86%E3%83%A9%E3%82%B9%E5%BA%97/#:~:text=%E3%81%9F%E3%81%97%E3%81%BE%E3%81%99%E3%80%82-,%E3%83%AC%E3%83%83%E3%82%B9%E3%83%B3%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB,-11%E6%9C%88" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>
+          <span class="text"><span class="main-t">星が丘テラス店</span><span class="sub-t">星が丘テラス</span></span>
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+        </a>
+        <a class="btn" href="https://pilates-nag.com/%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%AA/%E3%83%8A%E3%82%B4%E3%83%A4%E3%83%89%E3%83%BC%E3%83%A0%E5%BA%97/#:~:text=%E3%81%9F%E3%81%97%E3%81%BE%E3%81%99%E3%80%82-,%E3%83%AC%E3%83%83%E3%82%B9%E3%83%B3%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB,-11%E6%9C%88" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>
+          <span class="text"><span class="main-t">ナゴヤドーム前店</span><span class="sub-t">イオンモールナゴヤドーム前</span></span>
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© NAG STUDIO</footer>
+</div>
+</body>
+</html>

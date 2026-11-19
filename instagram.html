@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instagram | NAG STUDIO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #f7f5f2;
+    color: #424242;
+    font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .wrap {
+    max-width: 480px;
+    min-height: 100vh;
+    min-height: 100dvh;
+    margin: 0 auto;
+    padding: 56px 24px 32px;
+    display: flex;
+    flex-direction: column;
+  }
+  header { text-align: center; margin-bottom: 40px; }
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: #c9a96e;
+    font-weight: 500;
+    margin-bottom: 14px;
+  }
+  h1 { font-size: 19px; font-weight: 400; letter-spacing: 0.08em; }
+  .rule { width: 32px; height: 1px; background: #c9a96e; margin: 20px auto 0; }
+  main { flex: 1; display: flex; flex-direction: column; gap: 16px; }
+  .btn {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 22px 22px;
+    background: #f0ebe3;
+    border: 1px solid #c9a96e;
+    border-radius: 6px;
+    color: #424242;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.2s ease;
+  }
+  .btn:active { transform: scale(0.97); }
+  @media (hover: hover) { .btn:hover { box-shadow: 0 4px 14px rgba(201,169,110,0.18); } }
+  .icon { flex-shrink: 0; width: 28px; height: 28px; color: #c9a96e; }
+  .text { flex: 1; min-width: 0; }
+  .en { display: block; font-size: 15px; font-weight: 500; letter-spacing: 0.12em; }
+  .ja { display: block; font-size: 11px; font-weight: 300; letter-spacing: 0.1em; margin-top: 4px; color: #6d6d6d; }
+  .arrow { flex-shrink: 0; width: 14px; height: 14px; color: #c9a96e; }
+  footer { text-align: center; font-size: 10px; letter-spacing: 0.2em; color: #9e9e9e; margin-top: 48px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="eyebrow">INSTAGRAM</p>
+    <h1>アカウントを選択してください</h1>
+    <div class="rule"></div>
+  </header>
+
+  <main>
+    <a class="btn" href="https://www.instagram.com/hotyoga_nag_yogastudio/" target="_blank" rel="noopener">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="0.9" fill="currentColor" stroke="none"/>
+      </svg>
+      <span class="text">
+        <span class="en">NAG YOGA STUDIO</span>
+        <span class="ja">ナグ ヨガ スタジオ</span>
+      </span>
+      <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+    </a>
+
+    <a class="btn" href="https://www.instagram.com/pilates_nag_studio/" target="_blank" rel="noopener">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="0.9" fill="currentColor" stroke="none"/>
+      </svg>
+      <span class="text">
+        <span class="en">PILATES NAG STUDIO</span>
+        <span class="ja">ピラティス ナグ スタジオ</span>
+      </span>
+      <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+    </a>
+  </main>
+
+  <footer>© NAG STUDIO</footer>
+</div>
+</body>
+</html>
